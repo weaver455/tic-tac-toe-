@@ -1,0 +1,15 @@
+{
+  "name": "reston-weaver-multiplayer-tic-tac-toe",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A WebSocket multiplayer Tic-Tac-Toe game",
+  "author": "Reston Weaver",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "ws": "^8.18.0"
+  }
+}

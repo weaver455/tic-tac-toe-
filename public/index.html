@@ -1,0 +1,104 @@
+<!-- Reston Weaver -->
+<!-- LAB5 -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f2ea" />
+    <title>Tic-Tac-Toe by Reston Weaver</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="game">
+      <header class="game-header">
+        <h1>Tic-Tac-Toe Online</h1>
+      </header>
+
+      <section class="game-card" aria-label="Tic-Tac-Toe game">
+        <form id="login" class="login-form">
+          <label for="nameInput">Name</label>
+          <input
+            id="nameInput"
+            name="name"
+            type="text"
+            maxlength="40"
+            autocomplete="name"
+            required
+          />
+          <label for="passwordInput">Game password</label>
+          <input
+            id="passwordInput"
+            name="password"
+            type="password"
+            autocomplete="current-password"
+            required
+          />
+          <button id="joinBtn" class="join-button" type="submit" disabled>
+            Join game
+          </button>
+          <button
+            id="login-hint-toggle"
+            class="login-hint-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="login-hint"
+          >
+            How do I start the game?
+          </button>
+          <p id="login-hint" class="login-hint" hidden>
+            Start the server with <code>npm start</code>, then open
+            <code>http://localhost:3000</code>. Default password:
+            <code>secret123</code>.
+          </p>
+        </form>
+
+        <p id="connection-status" class="connection-status" aria-live="polite">
+          Connecting to game...
+        </p>
+        <p id="role" class="player-status" aria-live="polite">
+          Join to become a player or spectator.
+        </p>
+        <div class="game-info">
+          <p id="game-status" class="game-status" aria-live="polite">
+            <span class="turn-mark" aria-hidden="true">X</span>
+            <span>Player X's turn</span>
+          </p>
+          <button id="resetBtn" class="reset-button" type="button" disabled>
+            Reset game
+          </button>
+        </div>
+
+        <div class="board" role="group" aria-label="Game board">
+          <button class="cell" type="button" aria-label="Row 1, column 1, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 1, column 2, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 1, column 3, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 2, column 1, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 2, column 2, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 2, column 3, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 3, column 1, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 3, column 2, empty" disabled></button>
+          <button class="cell" type="button" aria-label="Row 3, column 3, empty" disabled></button>
+        </div>
+      </section>
+
+      <footer class="footer-note">Made by Reston Weaver</footer>
+    </main>
+
+    <div id="win-screen" class="win-screen" hidden>
+      <section
+        class="win-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="result-title"
+      >
+        <p class="eyebrow">Game over</p>
+        <h2 id="result-title">Nice one!</h2>
+        <button id="play-again-button" class="play-again-button" type="button">
+          Play again
+        </button>
+      </section>
+    </div>
+  </body>
+</html>
